@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>商品详情</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="../content/css/reset.css"/>
+<link rel="stylesheet" href="../content/css/main.css"/>
+<link rel="stylesheet" href="../content/css/jqzoom.css"/>
+</head>
+<body>
+    <div class="store_top">
+    	<div class="wrap">
+    		 <img src="../content/img/logo_vp.jpg">
+
+	    	<div class="store_searchwarp">
+			    		 <div class="search-box clear">
+			    		 	  <input type="text" name="" placeholder="请输入商品名称">
+			    		 	  <div class="bt">
+			    		 	  <i class="fa fa-search" aria-hidden="true"></i>
+			    		 	  店内搜索
+			    		     </div>
+			             </div>
+	    	</div>
+
+        </div>
+        <div class="name">店铺名称</div>
+        <div class="name2">某某某店铺图木</div>
+        <div class="storeDec">
+             <span>描叙相符: <span class="red">9.0 </span></span> 
+             <span>服务态度: <span class="red">9.0 </span></span> 
+             <span>物流速度: <span class="red">9.0 </span></span> 
+        </div>
+    </div>
+    <div class="store_nav">
+    	<div class="wrap">
+    		<ul class="nav clear">
+    		    <li><a href="">首页</a></li>
+    			<li class="classfiyli">全部商品
+    			</li>
+    			<li><a href="">子分类</a></li>
+    			<li><a href="">子分类</a></li>
+    			<li><a href="">子分类</a></li>
+    			<li><a href="">子分类</a></li>
+    			<li><a href="">子分类</a></li>
+    		</ul>
+    	</div>
+    </div>
+     <div class="wrap">
+    	<div class="detailWrap clear">
+<div class="fl zoombox">
+    <div id="jnProitem" >
+        <div class="jqzoomWrap">
+            <a href="img/blue_one_big.jpg" class="jqzoom" rel='gal1' title="商品名称" >
+                <img src="img/blue_one_small.jpg" style="width:397px;height:400px" id="bigImg" title="商品名字" />
+            </a>
+        </div>
+        <!--小图片开始-->
+        <ul class="imgList">
+            <li class="imgList_blue">
+              <a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/blue_one_small.jpg',largeimage: 'img/blue_one_big.jpg'}">		<img src='img/blue_one.jpg' alt="" class="mr" />
+              </a>
+             </li>
+            <li class="imgList_blue">
+                <a href='javascript:void(0);' 
+                rel="{gallery: 'gal1', smallimage: 'img/blue_two_small.jpg',largeimage: 'img/blue_two_big.jpg'}">
+                <img src='img/blue_two.jpg' alt=""/></a>
+             </li>
+            <li class="imgList_blue">
+                <a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/blue_three_small.jpg',largeimage: 'img/blue_three_big.jpg'}"><img src='img/blue_three.jpg' alt=""/></a>
+            </li>
+            <li class="imgList_blue"><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/blue_two_small.jpg',largeimage: 'img/blue_two_big.jpg'}"><img src='img/blue_two.jpg' alt=""/></a></li>
+            <li class="imgList_blue">
+               <a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/blue_three_small.jpg',largeimage: 'img/blue_three_big.jpg'}"><img src='img/blue_three.jpg' alt=""/></a>
+            </li>
+            <li class="imgList_green hide"><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/green_one_small.jpg',largeimage: 'img/green_one_big.jpg'}"><img src='img/green_one.jpg' alt=""/></a></li>
+            <li class="imgList_green hide"><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/green_two_small.jpg',largeimage: 'img/green_two_big.jpg'}"><img src='img/green_two.jpg' alt=""/></a></li>
+
+            <li class="imgList_yellow hide"><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/yellow_one_small.jpg',largeimage: 'img/yellow_one_big.jpg'}"><img src='img/yellow_one.jpg' alt=""/></a></li>
+            <li class="imgList_yellow hide"><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/yellow_two_small.jpg',largeimage: 'img/yellow_two_big.jpg'}"><img src='img/yellow_two.jpg' alt=""/></a></li>
+            <li class="imgList_yellow hide"><a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: 'img/yellow_three_small.jpg',largeimage: 'img/yellow_three_big.jpg'}"><img src='img/yellow_three.jpg' alt=""/></a>
+            </li>
+        </ul>
+    </div>
+</div>
+    		   <div class="info">
+    		       <h3>Beauty Artisan美丽工匠50ml透明喷瓶*2</h3>
+    		       <div class="minTitle">PET材料、轻巧易携带</div>
+    		   </div>
+        </div>
+
+
+
+    </div>
+ 
+    <script src="../script/jquery-1.8.3.min.js"></script>
+    <script src="../script/jquery.lazyload.js"></script>
+    <script src="../script/jquery.jqzoom-core.js"></script>
+    <script type="text/javascript">
+    	$(function(){
+    		 $('.jqzoom').jqzoom({
+					zoomType: 'standard',
+					lens:true,
+					preloadImages: false,
+					alwaysOn:false,
+					zoomWidth: 380,
+					zoomHeight: 380,
+					xOffset:10,
+					yOffset:0,
+					position:'right'
+			  });
+
+   /*  图片边框切换*/
+        $(".imgList").find("img").mouseover(function(){
+            $(this).css("border-color","#f3c264");
+            $(this).parent().parent().siblings().find("img").css("border-color","#ddd");
+        });
+        /*右侧小图片切换*/
+        /*衣服颜色切换*/
+        $(".color_change ul li img").click(function(){
+            $(this).addClass("hover").parent().siblings().find("img").removeClass("hover");
+            var imgSrc = $(this).attr("src");
+            var i = imgSrc.lastIndexOf(".");
+            var unit = imgSrc.substring(i);
+            imgSrc = imgSrc.substring(0,i);
+            var imgSrc_small = imgSrc + "_one_small"+ unit;
+            var imgSrc_big = imgSrc + "_one_big"+ unit;
+            $("#bigImg").attr({"src": imgSrc_small });
+            var alt = $(this).attr("alt");
+            $(".color_change strong").text(alt);
+            var newImgSrc = imgSrc.replace("img/","");
+            $("#jnProitem .imgList li").hide();
+            $("#jnProitem .imgList").find(".imgList_"+newImgSrc).show();
+        });
+    	})
+    </script>
+</body>
+</html>

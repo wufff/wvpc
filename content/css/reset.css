@@ -31,3 +31,4 @@ h4,h5,h6       {color: #232323 }
 .fr { float:right; }
 .red { color:red; }
 .P-head li {float: left}
+html .hide{display:none;}
