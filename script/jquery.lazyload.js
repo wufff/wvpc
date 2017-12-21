@@ -240,3 +240,8 @@
 
 })(jQuery, window, document);
 
+$(function(){
+      $("img.lazy").lazyload({
+            effect : "fadeIn"
+        });
+})
