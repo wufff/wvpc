@@ -128,14 +128,14 @@
   .pageWrap li.active {border-color:#f5f5f5;background-color:#f5f5f5; } 
 
 
-/*---------------------------------店铺开头的头部----------------------------------*/
+/*---------------------------------商品详情----------------------------------*/
 /*店铺顶部*/
 .store_top {background-color: #fff;}
 .store_top .wrap{position: relative; height: 100px;}
 .store_top img {width: 120px; margin-top: 8px; height: 78px;}
-.store_top .name { position: absolute;  left:300px;top:22px;}
-.store_top .name2 { position: absolute; left:315px;top:43px; font-size: 16px;}
-.store_top .storeDec { position: absolute; left:560px;top:43px;font-size: 13px;}
+.store_top .name { position: absolute;  left:156px;top:22px;}
+.store_top .name2 { position: absolute; left:178px;top:43px; font-size: 16px;}
+.store_top .storeDec { position: absolute; left:366px;top:43px;font-size: 13px;}
 .store_searchwarp { position: absolute; right:0px;top:30px; }
 /*店铺导航*/
 .store_nav{ height: 42px;line-height: 42px; width: 100%;background-color:#f3c264;color:#fff;margin-bottom: 10px;}
@@ -163,7 +163,7 @@
 .collectbox span {cursor: pointer; color: #999; margin-right: 25px;}
 .collectbox span i {margin-right: 5px;}
 /*商品信息*/
-.detailWrap > div.infobox{padding: 20px 20px 0 0;width: 566px; }
+.detailWrap > div.infobox{padding: 20px 20px 0 0;width: 566px;}
 .detailWrap > div.infobox .minTitle{ padding: 8px 0; border-bottom: 1px solid #ddd; color: #999;font-size: 13px; }
 .infoUl li {height:38px;line-height:38px;font-size: 14px; color: #999}
 .infoUl li .big { font-size: 21px; line-height: 30px;}
@@ -241,14 +241,8 @@
    cursor: pointer;
 }
 
-.infoUl li .addcart {
-   padding: 5px 20px;
-   color: #fff;
-   background-color: #f3c264; 
-   color:#fff;
-   cursor: pointer;
-
-}
+.infoUl li .addcart {padding: 2px 20px;color: #fff;background-color: #f3c264; color:#fff;cursor: pointer;}
+.infoUl li .addcart i {font-size: 20px;margin-right:2px;}
 
 /*右侧服务*/
 .detailWrap > div.severbox {width:156px;height:468px;padding: 20px 20px 0 0;}
@@ -307,28 +301,39 @@
 .commnetCbox .body li > div.content .text { font-size: 13px; line-height: 22px;padding: 12px 0 25px 0px; color: #666666;}
 
 /*---------------------------------购物车----------------------------------*/
-.cart_head {height: 80px;width: 100%;background-color: #fff;}
+#cart .icon { width: 18px; height:18px; cursor:pointer;vertical-align: text-top;}
+
+.cart_head {height: 80px;width: 100%;background-color: #fff;margin-bottom: 15px;}
 .cart_head .wrap {position: relative;}
 .cart_head .imgbox {width:160px;height:80px;position:absolute;}
 .cart_head img {height: 100%;width: 100%; }
 .cart_head .title {position: absolute;left:170px;top:26px; font-size:20px;}
-.cartWrap {padding:15px 20px;border:1px solid #eeeeee; background-color:#fff;}
+.cartWrap {padding:15px 20px;border:1px solid #eeeeee; background-color:#fff; }
 .cartWrap .head {font-size: 14px; padding: 0 0 15px 0; border-bottom:1px solid #eeeeee; }
-.cartWrap .head > div {float: left;}
+.cartWrap .head .icon {margin-right: 5px;}
+.cartWrap .head > div {float: left;text-align: center;}
+.cartWrap .head > div.td1{width: 60px;}
+.cartWrap .head > div.td2{width: 390px;}
+.cartWrap .head > div.td3{width: 190px;}
+.cartWrap .head > div.td4{width: 120px;}
+.cartWrap .head > div.td5{width: 170px;}
+.cartWrap .head > div.td6{width: 113px;}
+.cartWrap .head > div.td7{width: 113px;}
 
 .cartWrap .body > ul {padding-top: 10px;}
 .cartWrap .body > ul > li {margin-bottom: 10px;}
-.cartWrap .body > ul > li .soreName {height: 30px;line-height: 30px;border-bottom: 1px solid #f3c264; font-size: 14px;}
+.cartWrap .body > ul > li .soreName {height: 40px;line-height: 40px;border-bottom: 1px solid #f3c264; font-size: 14px;}
+.cartWrap .body > ul > li .soreName .icon {margin-right: 5px;}
 .cartWrap .itembox { font-size: 14px }
 .cartWrap .itembox li {padding: 20px 0;border-bottom: 1px solid #eeeeee; background-color: #fafafa;}
 .cartWrap .itembox li > div {float: left;text-align: center;}
-.cartWrap .itembox li > div.td1{width: 60px;/*background: red;*/}
+.cartWrap .itembox li > div.td1{width: 60px;/*background: red;*/padding-top: 36px;}
 .cartWrap .itembox li > div.td2{width: 110px;/*background: green; */text-align: left;}
-.cartWrap .itembox li > div.td3{width: 280px;/*background: pink;*/text-align: left;}
-.cartWrap .itembox li > div.td4{width: 190px;/*background: blue;*/padding-top: 32px;}
+.cartWrap .itembox li > div.td3{width: 280px;/*background: pink;*/text-align: left;color:#34495e;padding-top: 20px;}
+.cartWrap .itembox li > div.td4{width: 190px;/*background: blue;*/padding-top: 32px;color:#999;}
 .cartWrap .itembox li > div.td5{width: 120px;/*background: #eeeeee*/padding-top: 32px;}
 .cartWrap .itembox li > div.td6{width: 170px;/*background: yellow*/padding-top: 32px;}
-.cartWrap .itembox li > div.td7{width: 113px;/*background: purple*/padding-top: 32px;}
+.cartWrap .itembox li > div.td7{width: 113px;/*background: purple*/padding-top: 32px;font-size: 16px;}
 .cartWrap .itembox li > div.td8{width: 113px;padding-top: 32px;}
 .cartWrap .itembox li > div.td2 img{ width:90px; height: 90px;}
 .numbox {
@@ -362,3 +367,16 @@
    border:1px solid #cccccc;
    cursor: pointer;
 }
+#cart .foot {background-color: #fff;border:1px solid #eeeeee; border-top: none;padding: 0 0 0 20px; margin-bottom: 20px;}
+#cart .foot > div{ height:50px; line-height: 50px; font-size: 14px;}
+#cart .foot > div.checkbox{ width: 90px; }
+#cart .foot > div.checkbox .icon {margin-right:5px;}
+#cart .foot > div.detelbox{width: 90px; cursor: pointer;}
+#cart .foot > div.account{width: 120px; text-align: center; background-color: #f3c264; font-size: 20px;color: #fff;}
+#cart .foot > div.account.yes {background-color: #f3c264; cursor: pointer; }
+#cart .foot > div.account.no{background-color: #ddd;}
+#cart .foot > div.totle{margin-right: 40px;}
+#cart .foot > div.totle .red { font-size: 18px; }
+
+
+

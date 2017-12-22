@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="../content/css/reset.css"/>
 <link rel="stylesheet" href="../content/css/main.css"/>
+
 </head>
 </head>
 <body>
@@ -23,160 +24,189 @@
   	     </span>    
   	  </div>
   </div>
-<div class="wrap">
+<div class="wrap" id="cart">
   	 <div class="cartWrap">
   	 	<div class="head clear">
-  	 		<div class="td1"><input type="checkbox" name="" >全选</div>
+  	 		<div class="td1">
+  	 		     <input type="checkbox" name="checkAll" class="hide">
+                  <img src="../content/img/check.jpg" class="icon check" onclick="checkAll()">
+	  	 		  <img src="../content/img/checked.png" class="icon checked hide" onclick="nocheckAll()">
+	  	 		  全选
+  	 		</div>
   	 		<div class="td2">商品</div>
-  	 		<div class="td3">商品信息</div>
+  	 		<div class="td3">规格</div>
   	 		<div class="td4">单价</div>
-  	 		<div class="td5">小计</div>
-  	 	    <div class="td6">操作</div>
+  	 		<div class="td5">数量</div>
+  	 		<div class="td6">小计</div>
+  	 	    <div class="td7">操作</div>
   	 	</div>
   	 	<div class="body">
-  	 		<ul>
-  	 			<li>
-  	 				<div class="soreName">
-                <span class="soreNameCheckbox">
-                    <input type="checkbox" name="">
-                </span>
-                商店名字
-            </div>
-  	 				<ul class="itembox">
-               <li class="clear">
-                   <div class="td1" >1
-                      <input type="checkbox" name="">
-                   </div>
-                   <div class="td2" >
-                      <img data-original="http://img.lizi.com/lizi/user/559b9ed1e4b048b6023c18c7/d19a764d0b5.jpg" class="lazy">
-                   </div>
-                   <div class="td3">
-                      法国Eau Precieuse珍贵水袪痘爽肤水375ml 控油祛痘
-                   </div>
-                   <div class="td4" >
-                      规格：375ml
-                   </div>
-                   <div class="td5" >
-                      ¥ 99.00
-                   </div>
-                   <div class="td6">
-                      <div class="numbox clear">
-                                       <span class="add">-</span>
-                                       <span class="num">1</span>
-                                       <span class="sub">+</span>
-                      </div>
-                   </div>
-                   <div class="td7">
-                       <span class="red">¥ 99.00</span>
-                   </div>
-                   <div class="td8">
-                       <span class="delet">删除</span>
-                   </div>
-               </li>   
-               <li class="clear">
-                   <div class="td1" >1
-                      <input type="checkbox" name="">
-                   </div>
-                   <div class="td2" >
-                      <img data-original="http://img.lizi.com/lizi/user/559b9ed1e4b048b6023c18c7/d19a764d0b5.jpg" class="lazy">
-                   </div>
-                   <div class="td3" >
-                      法国Eau Precieuse珍贵水袪痘爽肤水375ml 控油祛痘
-                   </div>
-                   <div class="td4" >
-                      规格：375ml
-                   </div>
-                   <div class="td5" >
-                      ¥ 99.00
-                   </div>
-                   <div class="td6">
-                      <div class="numbox clear">
-                                       <span class="add">-</span>
-                                       <span class="num">1</span>
-                                       <span class="sub">+</span>
-                      </div>
-                   </div>
-                   <div class="td7">
-                       <span class="red">¥ 99.00</span>
-                   </div>
-                   <div class="td8">
-                       <span class="delet">删除</span>
-                   </div>
-               </li>   
-            </ul>
+  	 		<ul class="listUl">
+  	 			<li class="soreItem">
+			  	 	<div class="soreName">
+			                <span class="soreNameCheckbox">
+			                    <input type="checkbox" name="s1" class="hide">
+			                    <img src="../content/img/check.jpg" class="icon check" onclick="checkStore(this)">
+				  	 		    <img src="../content/img/checked.png" class="icon checked hide" onclick="NcheckStore(this)">
+			                </span>
+			                商店名字1
+			        </div>
+				   <ul class="itembox">
+							               <li class="clear">
+							                   <div class="td1" >
+							                      <input type="checkbox" class="hide" name="s1" >
+							                      <img src="../content/img/check.jpg" class="icon check" onclick="checkItem(this)">
+	  	 		                                  <img src="../content/img/checked.png" class="icon checked hide" onclick="NcheckItem(this)">
+							                   </div>
+							                   <div class="td2" >
+							                      <img data-original="http://img.lizi.com/lizi/user/559b9ed1e4b048b6023c18c7/d19a764d0b5.jpg" class="lazy">
+							                   </div>
+							                   <div class="td3">
+							                      法国Eau Precieuse珍贵水袪痘爽肤水375ml 控油祛痘
+							                   </div>
+							                   <div class="td4" >
+							                      规格：375ml
+							                   </div>
+							                   <div class="td5" >
+							                      ¥ 99.00
+							                   </div>
+							                   <div class="td6">
+							                      <div class="numbox clear">
+							                                       <span class="add">-</span>
+							                                       <span class="num">1</span>
+							                                       <span class="sub">+</span>
+							                      </div>
+							                   </div>
+							                   <div class="td7">
+							                       <span class="red">¥ 99.00</span>
+							                   </div>
+							                   <div class="td8">
+							                       <span class="delet">删除</span>
+							                   </div>
+							               </li>   
+							               <li class="clear">
+							                   <div class="td1" >
+							                      <input type="checkbox" class="hide" name="s1">
+							                      <img src="../content/img/check.jpg" class="icon check"  onclick="checkItem(this)">
+	  	 		                                  <img src="../content/img/checked.png" class="icon checked hide" onclick="NcheckItem(this)">
+							                   </div>
+							                   <div class="td2" >
+							                      <img data-original="http://img.lizi.com/lizi/user/559b9ed1e4b048b6023c18c7/d19a764d0b5.jpg" class="lazy">
+							                   </div>
+							                   <div class="td3" >
+							                      法国Eau Precieuse珍贵水袪痘爽肤水375ml 控油祛痘
+							                   </div>
+							                   <div class="td4" >
+							                      规格：375ml
+							                   </div>
+							                   <div class="td5" >
+							                      ¥ 99.00
+							                   </div>
+							                   <div class="td6">
+							                      <div class="numbox clear">
+							                                       <span class="add">-</span>
+							                                       <span class="num">1</span>
+							                                       <span class="sub">+</span>
+							                      </div>
+							                   </div>
+							                   <div class="td7">
+							                       <span class="red">¥ 99.00</span>
+							                   </div>
+							                   <div class="td8">
+							                       <span class="delet">删除</span>
+							                   </div>
+							               </li>   
+					 </ul>
   	 			</li>
-            <li>
-            <div class="soreName">
-                <span class="soreNameCheckbox">
-                    <input type="checkbox" name="">
-                </span>
-                商店名字
-            </div>
-            <ul class="itembox">
-               <li class="clear">
-                   <div class="td1" >1
-                      <input type="checkbox" name="">
-                   </div>
-                   <div class="td2" >
-                      <img data-original="http://img.lizi.com/lizi/user/559b9ed1e4b048b6023c18c7/d19a764d0b5.jpg" class="lazy">
-                   </div>
-                   <div class="td3">
-                      法国Eau Precieuse珍贵水袪痘爽肤水375ml 控油祛痘
-                   </div>
-                   <div class="td4" >
-                      规格：375ml
-                   </div>
-                   <div class="td5" >
-                      ¥ 99.00
-                   </div>
-                   <div class="td6">
-                      <div class="numbox clear">
-                                       <span class="add">-</span>
-                                       <span class="num">1</span>
-                                       <span class="sub">+</span>
-                      </div>
-                   </div>
-                   <div class="td7">
-                       <span class="red">¥ 99.00</span>
-                   </div>
-                   <div class="td8">
-                       <span class="delet">删除</span>
-                   </div>
-               </li>   
-               <li class="clear">
-                   <div class="td1" >1
-                      <input type="checkbox" name="">
-                   </div>
-                   <div class="td2" >
-                      <img data-original="http://img.lizi.com/lizi/user/559b9ed1e4b048b6023c18c7/d19a764d0b5.jpg" class="lazy">
-                   </div>
-                   <div class="td3" >
-                      法国Eau Precieuse珍贵水袪痘爽肤水375ml 控油祛痘
-                   </div>
-                   <div class="td4" >
-                      规格：375ml
-                   </div>
-                   <div class="td5" >
-                      ¥ 99.00
-                   </div>
-                   <div class="td6">
-                      <div class="numbox clear">
-                                       <span class="add">-</span>
-                                       <span class="num">1</span>
-                                       <span class="sub">+</span>
-                      </div>
-                   </div>
-                   <div class="td7">
-                       <span class="red">¥ 99.00</span>
-                   </div>
-                   <div class="td8">
-                       <span class="delet">删除</span>
-                   </div>
-               </li>   
-            </ul>
-          </li>
+  	 			<li class="soreItem">
+			  	 	<div class="soreName">
+			                <span class="soreNameCheckbox">
+			                    <input type="checkbox" name="s1" class="hide">
+			                    <img src="../content/img/check.jpg" class="icon check" onclick="checkStore(this)">
+				  	 		    <img src="../content/img/checked.png" class="icon checked hide" onclick="NcheckStore(this)">
+			                </span>
+			                商店名字1
+			        </div>
+				   <ul class="itembox">
+							               <li class="clear">
+							                   <div class="td1" >
+							                      <input type="checkbox" class="hide" name="s1" >
+							                      <img src="../content/img/check.jpg" class="icon check" onclick="checkItem(this)">
+	  	 		                                  <img src="../content/img/checked.png" class="icon checked hide" onclick="NcheckItem(this)">
+							                   </div>
+							                   <div class="td2" >
+							                      <img data-original="http://img.lizi.com/lizi/user/559b9ed1e4b048b6023c18c7/d19a764d0b5.jpg" class="lazy">
+							                   </div>
+							                   <div class="td3">
+							                      法国Eau Precieuse珍贵水袪痘爽肤水375ml 控油祛痘
+							                   </div>
+							                   <div class="td4" >
+							                      规格：375ml
+							                   </div>
+							                   <div class="td5" >
+							                      ¥ 99.00
+							                   </div>
+							                   <div class="td6">
+							                      <div class="numbox clear">
+							                                       <span class="add">-</span>
+							                                       <span class="num">1</span>
+							                                       <span class="sub">+</span>
+							                      </div>
+							                   </div>
+							                   <div class="td7">
+							                       <span class="red">¥ 99.00</span>
+							                   </div>
+							                   <div class="td8">
+							                       <span class="delet">删除</span>
+							                   </div>
+							               </li>   
+							               <li class="clear">
+							                   <div class="td1" >
+							                      <input type="checkbox" class="hide" name="s1">
+							                      <img src="../content/img/check.jpg" class="icon check"  onclick="checkItem(this)">
+	  	 		                                  <img src="../content/img/checked.png" class="icon checked hide" onclick="NcheckItem(this)">
+							                   </div>
+							                   <div class="td2" >
+							                      <img data-original="http://img.lizi.com/lizi/user/559b9ed1e4b048b6023c18c7/d19a764d0b5.jpg" class="lazy">
+							                   </div>
+							                   <div class="td3" >
+							                      法国Eau Precieuse珍贵水袪痘爽肤水375ml 控油祛痘
+							                   </div>
+							                   <div class="td4" >
+							                      规格：375ml
+							                   </div>
+							                   <div class="td5" >
+							                      ¥ 99.00
+							                   </div>
+							                   <div class="td6">
+							                      <div class="numbox clear">
+							                                       <span class="add">-</span>
+							                                       <span class="num">1</span>
+							                                       <span class="sub">+</span>
+							                      </div>
+							                   </div>
+							                   <div class="td7">
+							                       <span class="red">¥ 99.00</span>
+							                   </div>
+							                   <div class="td8">
+							                       <span class="delet">删除</span>
+							                   </div>
+							               </li>   
+					 </ul>
+  	 			</li>
   	 		</ul>
   	 	</div>
+  	 </div>
+  	 <div class="foot clear">
+  	 		<div class="fl checkbox">
+	  	 		<input type="checkbox" name="checkAll" class="hide" > 
+	  	 		<img src="../content/img/check.jpg" class="icon check" onclick="checkAll()">
+	  	 		<img src="../content/img/checked.png" class="icon checked hide" onclick="nocheckAll()">
+  	 		     全选
+  	 		</div>
+  	 		<div class="fl detelbox">删除</div>
+  	 		<div class="fr account no">结算</div>
+  	 		<div class="fr totle">合计：<span class="red">¥ 99.00</span></div>
   	 </div>
  </div>
 
@@ -189,4 +219,102 @@
  <script src="../script/jquery-1.8.3.min.js"></script>
  <script src="../script/jquery.lazyload.js"></script>
 </body>
+<script type="text/javascript">
+var headcheck =  $(".head").find("img.check").get(0);
+var headcheckN =  $(".head").find("img.checked").get(0);
+var footcheck =  $(".foot").find("img.check").get(0);
+var footcheckN =  $(".foot").find("img.checked").get(0);
+
+    function check (jsobj) {
+    	  $(jsobj).hide();
+		  $(jsobj).siblings('img').show();
+		  $(jsobj).siblings('input').get(0).checked = true;
+      }
+
+   function NoCheck (jsobj) {
+    	  $(jsobj).hide();
+		  $(jsobj).siblings('img').show();
+		  $(jsobj).siblings('input').get(0).checked = false;
+      }
+
+     function checkItem (jsobj){
+     	check (jsobj);
+        var length =  $(jsobj).parents("ul.itembox").find("input:checked").length;
+        var liLength = $(jsobj).parents("ul.itembox").find("li").length;
+        if(length == liLength){
+         var ele = $(jsobj).parents("li.soreItem").find(".soreName").find("img.check").get(0);
+         check (ele);
+        }
+         var storelength =  $(jsobj).parents("ul.listUl").find(".soreName").find("input:checked").length;
+         var storelilenght =  $(jsobj).parents("ul.listUl").find(".soreItem").length;
+        if(storelength == storelilenght){
+        	check (headcheck);
+        	check(footcheck);
+        	check (jsobj)
+        }
+        $(".account").removeClass("no").addClass("yes");
+     }
+  
+     function NcheckItem (jsobj){
+         NoCheck (jsobj);
+         var ele = $(jsobj).parents("li.soreItem").find(".soreName").find("img.checked").get(0);
+         NoCheck (ele);
+         NoCheck (headcheckN);
+         NoCheck (footcheckN);
+         if ($("input:checked").length == 0) {
+         	  $(".account").removeClass("yes").addClass("no");
+         };
+
+      }
+     
+
+   
+  function  checkStore (jsobj) {
+      check(jsobj);
+      $(jsobj).parents("li").find("img.check").each(function(index,ele){
+          check(ele);
+      })
+      var storelength =  $(jsobj).parents("ul.listUl").find(".soreNameCheckbox").find("input:checked").length;
+      var storelilenght =  $(jsobj).parents("ul.listUl").find(".soreItem").length;
+       if(storelength == storelilenght){
+        	check (headcheck);
+        	check(footcheck);
+        }
+     $(".account").removeClass("no").addClass("yes");   
+   }
+
+   function NcheckStore (jsobj) {
+      NoCheck (jsobj);
+       $(jsobj).parents("li").find("img.checked").each(function(index,ele){
+          NoCheck (ele);
+      })
+      NoCheck (headcheckN);
+      NoCheck (footcheckN);  
+       if ($("input:checked").length == 0) {
+         	$(".account").removeClass("yes").addClass("no");
+       };
+  }
+
+  function checkAll (jsobj) {
+  	   $("img.check").each(function(index,ele){
+          check(ele);
+      })
+  	  $(".account").removeClass("no").addClass("yes"); 
+  }
+ 
+  function nocheckAll () {
+  	 $("img.checked").each(function(index,ele){
+          NoCheck (ele)
+      })
+  	 $(".account").removeClass("yes").addClass("no");
+  }
+ 	 
+ $(function(){
+ 	// 修复IE默认选择bug
+ 	$("input").attr("checked", false);
+
+ })
+
+  
+</script>
 </html>
