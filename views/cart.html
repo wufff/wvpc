@@ -352,6 +352,7 @@ $(".delet").click(function(){
                             }
                             totalPrice();
                             Alert.close();
+                            postion ();
                         },
                         "取消":function(){
                             Alert.close();
@@ -427,6 +428,7 @@ $("#Pdelet").click(function(){
                         	$(".soreName").find("input:checked").parents(".soreItem").remove();
                         	$(".itembox").find("input:checked").parent().parent().remove();
                             totalPrice();
+                            postion ();
                             c.close();
                            },
                         "取消":function(){
@@ -437,7 +439,9 @@ $("#Pdelet").click(function(){
 	}
 });
 
-$(function(){
+
+function postion (){
+	console.log("postion");
 	var bodyHeight = document.documentElement.clientHeight;
 	 var footTop = $(".foot").offset().top+51;
 	 console.log("footTop"+footTop);
@@ -456,6 +460,10 @@ $(function(){
             }
 	 	  }); 
 	 }
+}
+
+$(function(){
+    postion ();
 })
 </script>
 </html>
