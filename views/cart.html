@@ -193,8 +193,38 @@
 							                       <span class="delet">删除</span>
 							                   </div>
 							               </li>
-							                  
-							              
+							                <li class="clear">
+							                   <div class="td1" >
+							                      <input type="checkbox" class="hide" name="item">
+							                      <img src="../content/img/check.jpg" class="icon check" onclick="checkItem(this)">
+	  	 		                                  <img src="../content/img/checked.png" class="icon checked hide" onclick="NcheckItem(this)">
+							                   </div>
+							                   <div class="td2" >
+							                      <img data-original="http://img.lizi.com/lizi/user/559b9ed1e4b048b6023c18c7/d19a764d0b5.jpg" class="lazy">
+							                   </div>
+							                   <div class="td3">
+							                      法国Eau Precieuse珍贵水袪痘爽肤水375ml 控油祛痘
+							                   </div>
+							                   <div class="td4" >
+							                      规格：375ml
+							                   </div>
+							                   <div class="td5" >
+							                      ¥ <span>99.00</span>
+							                   </div>
+							                   <div class="td6">
+							                      <div class="numbox clear">
+							                                       <span class="sub">-</span>
+							                                       <span class="num">1</span>
+							                                       <span class="add">+</span>
+							                      </div>
+							                   </div>
+							                   <div class="td7 red">
+							                       ¥ <span>99.00</span>
+							                   </div>
+							                   <div class="td8">
+							                       <span class="delet">删除</span>
+							                   </div>
+							               </li>        
 					     </ul>
   	 	   </li>
   	   </ul>
@@ -428,7 +458,12 @@ $("#Pdelet").click(function(){
                         	$(".soreName").find("input:checked").parents(".soreItem").remove();
                         	$(".itembox").find("input:checked").parent().parent().remove();
                             totalPrice();
-                            postion ();
+                            $(window).off();
+                            // $('html ,body').animate({scrollTop: 0}, 0);
+                            //重置底部滚动条的位置；
+                            postion();
+                            var scroll = $(window).scrollTop()+1;
+                            $('html ,body').animate({scrollTop:scroll}, 0);
                             c.close();
                            },
                         "取消":function(){
@@ -440,7 +475,7 @@ $("#Pdelet").click(function(){
 });
 
 
-function postion (){
+function postion(){
 	console.log("postion");
 	var bodyHeight = document.documentElement.clientHeight;
 	 var footTop = $(".foot").offset().top+51;
@@ -449,16 +484,26 @@ function postion (){
 	 if(footTop > bodyHeight) {
 	 	  $(".foot").addClass("fixed");
 	 	  $(".cartWrap").addClass("margin");
-	 	  $(window).scroll(function(){
-	 	  	 var scrollTop = $(this).scrollTop()+bodyHeight;
-             if(scrollTop > footTop ){
-                $(".foot").removeClass("fixed");
-	 	        $(".cartWrap").removeClass("margin");
-            }else {
-            	$(".foot").addClass("fixed");
-	 	        $(".cartWrap").addClass("margin");
-            }
-	 	  }); 
+	 	  // $(window).scroll(function(){
+	 	  // 	 var scrollTop = $(this).scrollTop()+bodyHeight;
+     //         if(scrollTop > footTop ){
+     //            $(".foot").removeClass("fixed");
+	 	  //       $(".cartWrap").removeClass("margin");
+     //        }else {
+     //        	$(".foot").addClass("fixed");
+	 	  //       $(".cartWrap").addClass("margin");
+     //        }
+	 	  // }); 
+	 	  $(window).on("scroll",function(){
+	 	  	   var scrollTop = $(this).scrollTop()+bodyHeight;
+              if(scrollTop > footTop ){
+                   $(".foot").removeClass("fixed");
+	               $(".cartWrap").removeClass("margin");
+                   }else {
+           	       $(".foot").addClass("fixed");
+	 	           $(".cartWrap").addClass("margin");
+	 	       }
+	 	  })
 	 }
 }
 

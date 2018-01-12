@@ -396,20 +396,22 @@
 
 
 /*---------------------checkout---------------*/
+.addressBox h3 {font-weight: normal;border-bottom: 1px solid #eeeeee;padding-bottom: 5px;}
+.addressBox p {font-size: 14px;padding-top: 5px;}
 .check_body {background-color: #fff; width:1200px; margin:0 auto;border:1px solid #eeeeee;}
 .check_body .addressBox {position: relative;}
 .check_body .addressBox .goAddress { right:10px; top:12px;position:absolute;}
 .check_body .addressBox h4 { padding: 20px;}
-.check_body .addressBox ul { padding-left: 38px;}
+.check_body .addressBox ul { padding-left: 20px;}
 .check_body .addressBox ul li {
     border:1px solid #eeeeee;
-    width: 250px;
-    height: 156px;
+    width: 243px;
+    height: 146px;
     overflow: hidden;
     float: left;
-    margin-right: 38px;
-    margin-bottom: 30px;
-    border
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
 }
 .check_body .checkBox { padding: 0px 20px 20px 20px; }
 .check_body .checkBox  .soreName {padding: 15px 0;font-size: 14px;}
@@ -431,3 +433,50 @@
 .check_body .checkBox .itemBox li div.td3{/*background-color: green; */ width: 248px;padding-top: 45px;}
 .check_body .checkBox .itemBox li div.td4{ /* background-color: pink; */width: 248px; padding-top: 45px;}
 .check_body .checkBox .itemBox li div.td5{ /* background-color: pink; */width: 98px; padding-top: 45px;}
+
+.check_body .checkBox .bzbox { background-color:#f8f8f8;padding: 20px 20px 50px 20px;font-size: 14px;position: relative;}
+.check_body .checkBox .bzbox textarea {width: 280px;height:30px;vertical-align: middle;border: 1px solid #ddd;box-shadow: 0 1px 3px rgba(200,200,200,.3) inset; font-size: 14px;padding:10px;margin-left: 20px;} 
+.check_body .checkBox .bzbox .favourable {position:absolute;right:22px;top:20px; font-size: 13px;} 
+.check_body .checkBox .bzbox  .postage{position:absolute;right:22px;bottom:40px; font-size: 13px;} 
+.check_body .checkBox .bzbox  .tot{position:absolute;right:22px;bottom:20px; font-size: 13px;} 
+.check_body .checkBox .bzbox  .big { font-size: 13px; font-weight: bold;}
+.check_body .footbox { height: 50px;border-top:1px solid #eeeeee;position: relative;}
+.check_body .footbox .sbm {float: right; color: #fff; background-color: #f3c264;height: 100%;line-height: 50px; text-align: center;width: 140px; font-size: 18px; cursor: pointer;}
+.check_body .footbox .totbox { position: absolute; top:14px;  right: 200px;}
+.check_body .footbox .totbox .big {font-size: 14px;}
+.check_body .footbox .totbox .biger { font-size: 18px;font-weight: bold;}
+
+
+/*-------------------------------------------------个人中心----------------------------------*/
+/*订单*/
+.listbox { border:1px solid #eeeeee;border-bottom: none; width: 203px;margin-right: 20px; background-color: #fff;}
+.sectionbox { border:1px solid #eeeeee; width: 945px;background-color: #fff;}
+.listbox h2 { border-bottom:1px solid #eeeeee;padding: 12px 0 12px 15px;font-size: 20px;font-weight:normal;background-color: #fafafa;}
+.listbox h3 {border-bottom:1px solid #eeeeee;padding: 10px 0 10px 15px;font-size: 16px;font-weight:normal;}
+.listbox ul {border-bottom: 1px solid #eeeeee;padding: 6px 0;}
+.listbox li a{ padding: 6px 0 6px 15px; font-size: 14px;}
+.listbox a:hover{color:#f3c264;}
+
+.sectionbox .head { padding: 14px 0;position: relative;}
+.sectionbox .head a { font-size: 16px;border-right:1px solid #eeeeee;float: left; width:120px;text-align: center;}
+.sectionbox .head a.active{ color:#f3c264;}
+.sectionbox .head a span {font-size: 14px;margin-left: 4px;} 
+.sectionbox .body { border-top: 1px solid #eeeeee;padding: 15px; }
+.titlebox {background-color: #fafafa;}
+.titlebox > div {float: left; text-align: center;padding: 10px 0;font-size: 14px; }
+.sectionbox .td1{/*background-color: red;*/width: 290px; text-align:left;padding-left: 10px;}
+.sectionbox .td1 img { width: 70px; height: 70px; float: left;}
+.sectionbox .td1 span {float: left;width: 170px;white-space:normal;word-wrap:break-word;padding-left: 10px;}
+.sectionbox .td2{/*background-color: pink;*/width: 100px; text-align: center;}
+.sectionbox .td3{/*background-color: green;*/width: 100px; text-align: center;}
+.sectionbox .td4{/*background-color: yellow;*/width: 100px; text-align: center;}
+.sectionbox .td5{/*background-color: blue;*/width: 100px; text-align: center;}
+.sectionbox .td6{/*background-color: #999;*/width: 100px; text-align: center;}
+.sectionbox .td7{/*background-color: black;*/width: 115px; text-align: center;}
+.sectionbox img.icon { width:18px; height: 18px; cursor: pointer;margin-right: 5px;vertical-align: text-bottom;}
+.checkTilte {font-size: 14px;padding: 15px 0 ;}
+.checkTilte .bt {padding: 5px 12px; background-color:#f3c264; color:#fff; margin-left: 10px; cursor: pointer;}
+.stromeTitle {background-color: #fafafa;font-size: 13px;padding: 5px 10px;position: relative;}
+.stromeTitle .name {position: absolute; right: 20px;top:5px;}
+.itembox .item > div {float: left;padding-top: 30px; font-size: 13px;height: 50px; margin-bottom: 15px;}
+.itembox .item > div.td1 { padding-top: 10px; }
