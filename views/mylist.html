@@ -58,10 +58,10 @@
               <a href="">账户管理</a>
             </h3>
             <ul>
-              <li>
-                <a href="">我的订单</a>
+              <li >
+                <a href="" class="active">我的订单</a>
               </li>
-              <li>
+              <li >
                  <a href="">我的丽子币</a>
               </li>
               <li>
@@ -112,8 +112,8 @@
             </div>
             <div class="checkTilte">
                <input type="checkbox" class="hide" name="item">
-               <img src="../content/img/check.jpg" class="icon check" onclick="">
-               <img src="../content/img/checked.png" class="icon checked hide" onclick="">
+               <img src="../content/img/check.jpg" class="icon check" onclick="checkAll(this)">
+               <img src="../content/img/checked.png" class="icon checked hide" onclick="nocheckAll()">
                全选
                <span class="bt">合并付款</span>
             </div>
@@ -121,8 +121,8 @@
               <li class="itembox">
                  <div class="stromeTitle">
                      <input type="checkbox" class="hide" name="item">
-                     <img src="../content/img/check.jpg" class="icon check" onclick="">
-                     <img src="../content/img/checked.png" class="icon checked hide" onclick="">
+                     <img src="../content/img/check.jpg" class="icon check" onclick="checkItem(this)">
+                     <img src="../content/img/checked.png" class="icon checked hide" onclick="NcheckItem(this)">
                      2018-01-12订单号: 121417351441568602
                      <div class="name">店铺：Muscularphysique运动店</div>
                  </div>
@@ -158,8 +158,8 @@
                <li class="itembox">
                  <div class="stromeTitle">
                      <input type="checkbox" class="hide" name="item">
-                     <img src="../content/img/check.jpg" class="icon check" onclick="">
-                     <img src="../content/img/checked.png" class="icon checked hide" onclick="">
+                     <img src="../content/img/check.jpg" class="icon check" onclick="checkItem(this)">
+                     <img src="../content/img/checked.png" class="icon checked hide" onclick="NcheckItem(this)">
                      2018-01-12订单号: 121417351441568602
                      <div class="name">店铺：Muscularphysique运动店</div>
                  </div>
@@ -192,53 +192,16 @@
                    </li>
                  </ul> 
               </li>
-              <li class="itembox">
-                 <div class="stromeTitle">
-                     <input type="checkbox" class="hide" name="item">
-                     <img src="../content/img/check.jpg" class="icon check" onclick="">
-                     <img src="../content/img/checked.png" class="icon checked hide" onclick="">
-                     2018-01-12订单号: 121417351441568602
-                     <div class="name">店铺：Muscularphysique运动店</div>
-                 </div>
-                 <ul>
-                   <li class="clear item">
-                      <div class="td1" >
-                       <img src="http://img.lizi.com/lizi/store/554b07acf31ef04978652554/1797c947a4227.jpg!wh70">
-                       <span style="padding-top:15px;">12313123123</span>
-                      </div>
-                      <div class="td2">
-                            ￥59.00
-                      </div>
-                      <div class="td3">
-                          1
-                      </div>
-                       <div class="td4">
-                            投诉卖家
-                        </div>
-                      <div class="td5">
-                             ￥59.00
-                      </div>
-                      <div class="td6 red">
-                             等待买家付款
-                      </div>
-                      <div class="td7">
-                          <span>
-                             <a href="">立即付款</a>
-                          </span>
-                      </div>
-                   </li>
-                 </ul> 
-              </li>
             </ul>
             <div class="checkTilte">
                <input type="checkbox" class="hide" name="item">
-               <img src="../content/img/check.jpg" class="icon check" onclick="">
-               <img src="../content/img/checked.png" class="icon checked hide" onclick="">
+               <img src="../content/img/check.jpg" class="icon check" onclick="checkAll(this)">
+               <img src="../content/img/checked.png" class="icon checked hide" onclick="nocheckAll()">
                全选
                <span class="bt">合并付款</span>
             </div>
          </div>
-          <div class="pageWrap clear">
+          <div class="pageWrap clear" style="padding-right:20px;">
             <ul class="fr">
                <li>上一页</li>
                <li>1</li>
@@ -250,28 +213,57 @@
         </div>
        </div>
     </div>
-  
-
-
-
 </body>
 <script src="../script/jquery-1.8.3.min.js"></script>
 <script src="../script/jquery.lazyload.js"></script>
 <script src="../script/index.js"></script>
 <script type="text/javascript">
+
    function check (jsobj) {
         $(jsobj).hide();
       $(jsobj).siblings('img').show();
       $(jsobj).siblings('input').get(0).checked = true;
-  
       }
+
 
    function NoCheck (jsobj) {
         $(jsobj).hide();
       $(jsobj).siblings('img').show();
       $(jsobj).siblings('input').get(0).checked = false;
-  
       }
+
+
+  function checkItem (jsobj){
+      check (jsobj);
+        var length =  $("li.itembox").find("input:checked").length;
+        var liLength =$("li.itembox").length;
+        if(length == liLength){
+          $(".checkTilte").find("img.check").each(function(index,ele){
+               check(ele);
+        })
+        }
+     }
+
+
+  function NcheckItem (jsobj){
+          NoCheck (jsobj);
+          $(".checkTilte").find("img.checked").each(function(index,ele){
+              NoCheck (ele);
+        });
+      }
+ 
+  function checkAll (jsobj) {
+       $("img.check").each(function(index,ele){
+          check(ele);
+      })
+  }
+ 
+  function nocheckAll () {
+     $("img.checked").each(function(index,ele){
+          NoCheck (ele);
+      })
+  }
+
 </script>
 </html>
 </html>
