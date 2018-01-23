@@ -63,7 +63,7 @@ body{background: #fafafa;}
 
 
 /*最顶上小头部*/
-.P-head{height: 18px;line-height: 18px;color:#9e9e9e;background-color: #f0f0f0;width: 100%;padding:6px 0;}
+.P-head{color:#9e9e9e;background-color: #f0f0f0;width: 100%;padding:4px 0px 6px 0px;}
 .P-head li {float: left;margin-left: 30px;}
 .P-head li a{ color: #9e9e9e }
 .P-head li .login_a {border-right: 1px solid #ddd;}
@@ -76,7 +76,7 @@ body{background: #fafafa;}
 .search_top img {width: 200px; margin-top: 8px;}
 .search_top .searchwarp { position: absolute; left:372px;top:20px; }
 .search_top .cartBtn { width: 125px; height: 40px; text-align: center; position: absolute; 
-  right:0px;top:20px;border:1px solid #ddd; line-height: 40px;font-size: 16px;color: #999999;cursor: pointer;}
+  right:0px;top:26px;border:1px solid #ddd; line-height: 40px;font-size: 16px;color: #999999;cursor: pointer;}
 .search_top .hotWords {position: absolute; left:372px;top:67px; }
 .search_top .hotWords span {margin: 0 5px; font-size:14px;cursor: pointer;}
 .search_top .cartNum {position:absolute;right:-1px;top:17px;line-height: 20px;background-color:red;color: #fff;
