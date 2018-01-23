@@ -13,34 +13,35 @@
 <link rel="stylesheet" href="../content/css/main.css"/>
 </head>
 <body>
-    <div class="index_top">
-    	<div class="wrap">
-    		 <img src="../content/img/logo_vp.jpg">
-	    	<div class="index_searchwarp">
-			    		 <div class="search-box clear">
-			    		 	  <input type="text" name="" placeholder="请输入商品名称">
-			    		 	  <div class="bt">
-			    		 	  <i class="fa fa-search" aria-hidden="true"></i>
-			    		 	  去发现
-			    		     </div>
-			             </div>
-	    	</div>
-	    	<div class="hotWords">
-	    		<span>热搜榜</span>:
-	    		<span class="red">悦诗风吟</span>
-	    		<span>兰芝</span>
-	    		<span class="red">面膜</span>
-	    		<span>化妆水</span>
-	    		<span class="red">唇膏/口红</span>
-	    	    <span>bb霜</span>
-	    	</div>
-	    	<div class="cartBtn">
-			         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-			    		购物车 >
-			</div>	 
-        </div>
+    <div class="search_top">
+      <div class="wrap">
+         <img src="../content/img/logo_vp.jpg">
+         <div class="searchwarp">
+               <div class="search-box clear">
+                  <input type="text" name="" placeholder="请输入商品名称">
+                  <div class="bt">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  去发现
+                   </div>
+                   </div>
+         </div>
+         <div class="hotWords">
+            <span>热搜榜</span>:
+            <span class="red">悦诗风吟</span>
+            <span>兰芝</span>
+            <span class="red">面膜</span>
+            <span>化妆水</span>
+            <span class="red">唇膏/口红</span>
+            <span>bb霜</span>
+         </div>
+         <span class="cartNum">88</span>
+         <div class="cartBtn">
+               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              购物车 >
+        </div>   
+      </div>
     </div>
-    <div class="index_nav">
+    <div class="catalog-nav">
     	<div class="wrap">
     		<ul class="nav clear">
     			<li class="classfiyli"><i class="fa fa-th"></i>全部商品分类
@@ -281,4 +282,15 @@
 </body>
 <script src="../script/jquery-1.8.3.min.js"></script>
 <script src="../script/jquery.lazyload.js"></script>
+<script src="../script/extend.js"></script>
+<script type="text/javascript">
+  $(function(){
+        // 显出分类
+      $(".classfiyli").mouseover(function(){
+         $(".classbox").show();
+      }).mouseout(function(){
+          $(".classbox").hide();
+      }) 
+  })
+</script>
 </html>

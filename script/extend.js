@@ -1,77 +1,99 @@
-/**
- * 
- * @authors Your Name (you@example.org)
- * @date    2018-01-10 17:03:31
- * @version $Id$
- */
-var simpleAlert = function (opts) {
-    //设置默认参数
-    var opt = {
-        "closeAll": false,
-        "title": "提示",
-        "content": "",
-        "buttons": {}
-    }
-    //合并参数
-    var option = $.extend(opt, opts);
-    //事件
-    var dialog = {}
-    var $simpleAlert = $('<div class="simpleAlert">');
-    var $shelter = $('<div class="simpleAlertShelter">');
-    var $simpleAlertBody = $('<div class="simpleAlertBody">');
-    var $simpleAlertBodyClose = $('<img class="simpleAlertBodyClose" src="../content/img/closeWhite.png" height="14" width="14"/>');
-    var $simpleAlertBodyTitle = $('<p class="simpleAlertBodyTitle">' + option.title + '</p>');
-    var $simpleAlertBodyContent = $('<p class="simpleAlertBodyContent">' + option.content + '</p>');
-    dialog.init = function () {
-        $simpleAlertBody.append($simpleAlertBodyClose).append($simpleAlertBodyContent).append($simpleAlertBodyTitle);
-        var num = 0;
-        var only = false;
-        var onlyArr = [];
-        for (var i = 0; i < 2; i++) {
-            for (var key in option.buttons) {
-                switch (i) {
-                    case 0:
-                        onlyArr.push(key);
-                        break;
-                    case 1:
-                        if (onlyArr.length <= 1) {
-                            only = true;
-                        } else {
-                            only = false;
-                        }
-                        num++;
-                        var $btn = $('<button class="simpleAlertBtn simpleAlertBtn' + num + '">' + key + '</button>')
-                        $btn.bind("click", option.buttons[key]);
-                        if (only) {
-                            $btn.addClass("onlyOne")
-                        }
-                        $simpleAlertBody.append($btn);
-                        break;
+(function ($) {
+    $.fn.extend({
+             carrousel: function (width,s) {
+                var i = 0;
+                var stop = false;
+                var onff = false;
+                var wrap = $(this);
+                var ul = $(this).find("ul").eq(0);
+                var ul2 = $(this).find("ul").eq(1);
+                var btn = $(this).find("div");
+                var li = ul.find("li");
+                var prev = btn.find("span").eq(0);
+                var next = btn.find("span").eq(1);
+                li.width(width);
+                wrap.width(width);
+                ul.width(width*li.length);
+                for(var j =0;j<li.length;j++){
+                    ul2.append("<li></li>");
                 }
-
-            }
-        }
-        $simpleAlert.append($shelter).append($simpleAlertBody);
-        $("body").append($simpleAlert);
-        $simpleAlertBody.show().animate({"marginTop":"-128px","opacity":"1"},300);
-    }
-    //右上角关闭按键事件
-    $simpleAlertBodyClose.bind("click", function () {
-        option.closeAll=false;
-        dialog.close();
+                var li2 = ul2.find("li");
+                li2.eq(0).addClass("this");
+                wrap.mouseover(function(){
+                    btn.show();
+                }).mouseout(function(){
+                    btn.hide();
+                });
+                var fristimg =li.eq(0).clone();
+                ul.append(fristimg);
+                li = ul.find("li");
+                ul.width(li.length*width);
+                next.click(function(){
+                   if(!onff){
+                       onff = true;
+                       i ++;
+                       ul.animate({left:-i*width},300,function(){
+                           onff = false;
+                       });
+                       if(i==li.length){
+                           i = 1;
+                           ul.css("left","0px");
+                           ul.stop().animate({left:-i*width},300,function(){
+                               onff = false;
+                           })
+                       }
+                       if(i==li.length -1){
+                           li2.eq(0).addClass("this").siblings().removeClass("this");
+                       }else{
+                           li2.eq(i).addClass("this").siblings().removeClass("this");
+                       }
+                   }
+                });
+                prev.click(function(){
+                  if(!onff){
+                      onff = true;
+                      i--;
+                      ul.animate({left:-i*width},300,function(){
+                          onff = false;
+                      });
+                      if(i==-1){
+                          i = li.length -2;
+                          ul.css({left:-(li.length -1)*width});
+                          ul.stop().animate({left:-i*width},300,function(){
+                              onff = false;
+                          });
+                          li2.eq(i).addClass("this").siblings().removeClass("this");
+                      }else{
+                          li2.eq(i).addClass("this").siblings().removeClass("this");
+                      }
+                  }
+                })
+                li2.click(function(){
+                    var index = $(this).index();
+                    ul.stop().animate({left:-index*width},300);
+                    li2.eq(index).addClass("this").siblings().removeClass("this");
+                    i = index;
+                });
+                setInterval(function(){
+                    if(!stop) {
+                        i++;
+                        if (i == li.length) {
+                            i = 1;
+                            ul.css("left", "0px");
+                        }
+                        ul.stop().animate({left: -i * width}, 300);
+                        if (i == li.length - 1) {
+                            li2.eq(0).addClass("this").siblings().removeClass("this");
+                        } else {
+                            li2.eq(i).addClass("this").siblings().removeClass("this");
+                        }
+                    }
+                },s);
+                wrap.mouseover(function(){
+                    stop = true;
+                }).mouseout(function(){
+                    stop = false;
+                });
+          }
     })
-    dialog.close = function () {
-        if(option.closeAll){
-            $(".simpleAlertBody").animate({"marginTop": "-188px", "opacity": "0"}, 200, function () {
-                $(".simpleAlert").remove()
-            });
-        }else {
-            $simpleAlertBody.animate({"marginTop": "-188px", "opacity": "0"}, 200, function () {
-                $(".simpleAlert").last().remove()
-            });
-        }
-    }
-    dialog.init();
-    return dialog;
-}
-
+})(jQuery);
