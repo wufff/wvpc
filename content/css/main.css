@@ -417,19 +417,11 @@ body{background: #fafafa;}
 .addressBox p {font-size: 14px;padding-top: 5px;}
 .check_body {background-color: #fff; width:1200px; margin:0 auto;border:1px solid #eeeeee;}
 .check_body .addressBox {position: relative;}
-.check_body .addressBox .goAddress { right:10px; top:12px;position:absolute;}
+.check_body .addressBox .goAddress { right:22px; top:22px;position:absolute;}
 .check_body .addressBox h4 { padding: 20px;}
 .check_body .addressBox ul { padding-left: 20px;}
-.check_body .addressBox ul li {
-    border:1px solid #eeeeee;
-    width: 243px;
-    height: 146px;
-    overflow: hidden;
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding: 10px 15px;
-}
+.check_body .addressBox ul li {border:1px solid #eeeeee;width: 243px;height: 146px;overflow: hidden;float: left;margin-right: 20px;margin-bottom: 20px;
+    padding: 10px 15px;}
 .check_body .checkBox { padding: 0px 20px 20px 20px; }
 .check_body .checkBox  .soreName {padding: 15px 0;font-size: 14px;}
 .check_body .checkBox ul.ul { border-top:1px solid #eeeeee; border-bottom: 1px solid #eeeeee; }
@@ -512,8 +504,9 @@ body{background: #fafafa;}
 /*-------------------------------------------------登录系列----------------------------------*/
 /*登录*/
 #login_login .white_black{position: static; margin: 0;border:1px solid #ccc;box-shadow: 0 0 15px rgba(204,204,204,.5);border-radius: 0;height: 440px;}
-.loginWrap { background-color: #fafafa;padding: 30px 0; border-bottom: 2px solid #ecb64f;}
+.loginWrap { background-color: #fafafa;padding: 30px 0; border-bottom: 1px solid #ecb64f;}
 .loginWrap .wrap { width: 1050px;}
+
 /*注册*/
 #register .body  ul li {margin-bottom: 25px;}
 #register .body  ul li input {border: none;}
@@ -528,40 +521,12 @@ body{background: #fafafa;}
 
 /*找回密码*/
 .stepBox {position: relative;}
-.stepBox  .gray_bg{
-    background-image: url("../img/resetpwd.png");
-    background-repeat: no-repeat;
-    height: 37px;
-    overflow: hidden;
-    position: absolute;
-    left: 4px;
-    top: 0;
-    width: 100%;
-}
-.stepBox .yellow_bg {
-    background-image: url("../img/resetpwd.png");
-    background-position: 0 -40px;
-    background-repeat: no-repeat;
-    height: 37px;
-    overflow: hidden;
-    position: absolute;
-    left: 4px;
-    top: 0;
-    width: 100%;
-    z-index: 2
-}
-.stepBox  .num {
-    width: 100%;
-    height: 37px;
-    line-height: 37px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 16px;
-    left: 4px;
-    top: 0;
-    width: 100%;
-    z-index: 3;
-}
+.stepBox  .gray_bg{background-image: url("../img/resetpwd.png");background-repeat: no-repeat;height: 37px;overflow: hidden;
+        position: absolute;left: 4px;top: 0;width: 100%;}
+.stepBox .yellow_bg {background-image: url("../img/resetpwd.png");background-position: 0 -40px;background-repeat: no-repeat;height: 37px;
+    overflow: hidden;position: absolute;left: 4px;top: 0;width: 100%;z-index: 2}
+.stepBox  .num {width: 100%;height: 37px;line-height: 37px;color: #fff;font-weight: 700;font-size: 16px;left: 4px;top: 0;width: 100%;
+    z-index: 3;}
 .num .num1, .num .num2, .num .num3{position: absolute;z-index:5}
 .num .num1 { left: 18px; }
 .num .num2 { left: 159px; }
@@ -570,12 +535,12 @@ body{background: #fafafa;}
 .stepBox .step_p .text1 { position: absolute;left: 0px; top: 5px;}
 .stepBox .step_p .text2 { position: absolute;left: 140px; top: 5px;}
 .stepBox .step_p .text3  { position: absolute;left: 276px; top: 5px;}
-.stepBox.step1 .step_p .text1 { color:red; }
-.stepBox.step1 .yellow_bg {width: 32px;}
-.stepBox.step2 .step_p .text2 { color:red; }
-.stepBox.step2 .yellow_bg {width: 172px;}
-.stepBox.step3 .step_p .text3 { color:red; }
-.stepBox.step3 .yellow_bg {width: 315px;}
+.stepBox.step1 .step_p .text1 { color:red;}
+.stepBox.step1 .yellow_bg {width:32px;}
+.stepBox.step2 .step_p .text2 { color:red;}
+.stepBox.step2 .yellow_bg {width:172px;}
+.stepBox.step3 .step_p .text3 { color:red;}
+.stepBox.step3 .yellow_bg {width:315px;}
 
 #find .body  ul li input {border: none;}
 #find .body  ul li input::placeholder {color: #cccccc;}
