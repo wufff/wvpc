@@ -256,6 +256,7 @@
  <script src="../script/jquery-1.8.3.min.js"></script>
  <script src="../script/jquery.lazyload.js"></script>
  <script src="../script/extend.js"></script>
+ <script src="../script/simpleAlert.js"></script>
 </body>
 <script type="text/javascript">
 // 多选
@@ -367,8 +368,8 @@ var footcheckN =  $(".foot").find("img.checked").get(0);
  })
 // 多选结束
   
+  
 // 删除
-
 $(".delet").click(function(){
 	      var _this = this;
 	      var Alert = simpleAlert({
@@ -382,8 +383,11 @@ $(".delet").click(function(){
                             	strom.remove();
                             }
                             totalPrice();
+                             $(window).off();
+                            postion();
+                            var scroll = $(window).scrollTop()+1;
+                            $('html ,body').animate({scrollTop:scroll}, 0);
                             Alert.close();
-                            postion ();
                         },
                         "取消":function(){
                             Alert.close();
@@ -393,6 +397,7 @@ $(".delet").click(function(){
       });
 
 
+// 计算总价
  function totalPrice(){
  	var prices = 0;
  	var length = $(".itembox").find("input:checked").length;
@@ -409,6 +414,7 @@ $(".delet").click(function(){
  }
 
 
+// 加商品
 $(".numbox").find(".add").click(function(){
 	var num = parseInt($(this).siblings('.num').text());
 	num++;
@@ -422,6 +428,8 @@ $(".numbox").find(".add").click(function(){
     };
 })
 
+
+// 减商品
 $(".numbox").find(".sub").click(function(){
     var num = parseInt($(this).siblings('.num').text());
     if(num == 1){
@@ -439,6 +447,7 @@ $(".numbox").find(".sub").click(function(){
 })
 
 
+// 批量删除
 $("#Pdelet").click(function(){
 	var length = $("ul.itembox").find("input:checked").length;
 	if(length == 0){
@@ -476,25 +485,14 @@ $("#Pdelet").click(function(){
 });
 
 
+
+// 底部定位
 function postion(){
-	console.log("postion");
 	var bodyHeight = document.documentElement.clientHeight;
 	 var footTop = $(".foot").offset().top+51;
-	 console.log("footTop"+footTop);
-	 console.log("bodyHeight"+bodyHeight);
 	 if(footTop > bodyHeight) {
 	 	  $(".foot").addClass("fixed");
 	 	  $(".cartWrap").addClass("margin");
-	 	  // $(window).scroll(function(){
-	 	  // 	 var scrollTop = $(this).scrollTop()+bodyHeight;
-     //         if(scrollTop > footTop ){
-     //            $(".foot").removeClass("fixed");
-	 	  //       $(".cartWrap").removeClass("margin");
-     //        }else {
-     //        	$(".foot").addClass("fixed");
-	 	  //       $(".cartWrap").addClass("margin");
-     //        }
-	 	  // }); 
 	 	  $(window).on("scroll",function(){
 	 	  	   var scrollTop = $(this).scrollTop()+bodyHeight;
               if(scrollTop > footTop ){
